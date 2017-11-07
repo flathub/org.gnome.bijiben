@@ -105,8 +105,8 @@
             "sources": [
                 {
                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/1.12/tracker-1.12.0.tar.xz",
-                    "sha256": "83193dd8c05e3e8b05fa8f1cfb80964fa78f7aeb86f3302fa4be6ec7e6ff596f"
+                    "url": "https://download.gnome.org/sources/tracker/1.12/tracker-1.12.4.tar.xz",
+                    "sha256": "b33c2ff730bafaffb34cab79d29d50392426f02d29d1690c4f6d384ff60a358d"
                 }
             ]
         },
@@ -115,10 +115,11 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/bijiben/3.26/bijiben-3.26.1.tar.xz",
-                    "sha256": "4f5bc9f5b86162038f24f4a02a659500f294b6811de8e77ed61a3bd6ec20d499"
+                    "url": "https://download.gnome.org/sources/bijiben/3.26/bijiben-3.26.2.tar.xz",
+                    "sha256": "7e574484b2fdc39d56ac589aff560669691054bd01a126836f365916ebed4305"
                 }
-            ]
+            ],
+            "post-install": [ "rm /app/share/metainfo/org.gnome.bijiben.appdata.xml" ]
         }
     ]
 }
