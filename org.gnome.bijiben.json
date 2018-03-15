@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.bijiben",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.28",
     "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "bijiben",
@@ -115,8 +115,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/bijiben/3.26/bijiben-3.26.2.tar.xz",
-                    "sha256": "7e574484b2fdc39d56ac589aff560669691054bd01a126836f365916ebed4305"
+                    "url": "https://download.gnome.org/sources/bijiben/3.28/bijiben-3.28.0.tar.xz",
+                    "sha256": "26cf004c8520fbf4578a6af93ffad3c064e31aa542d5764283b7b6fce244fc10"
                 }
             ],
             "post-install": [ "rm /app/share/metainfo/org.gnome.bijiben.appdata.xml" ]
