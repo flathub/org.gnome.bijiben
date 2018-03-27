@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.bijiben",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.28",
     "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "bijiben",
@@ -45,8 +45,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.26/gnome-online-accounts-3.26.0.tar.xz",
-                    "sha256": "5cab736751c19efca762c0459e3358255d6662a6f4f27728cd02ea7b024e52ac"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.28/gnome-online-accounts-3.28.0.tar.xz",
+                    "sha256": "87bc4ef307604f1ce4f09f6e5c9996ef8d37ca5e0a3bf76f6b27d71844adb40c"
                 }
             ]
         },
@@ -59,8 +59,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/libical/libical/releases/download/v2.0.0/libical-2.0.0.tar.gz",
-                    "sha256": "654c11f759c19237be39f6ad401d917e5a05f36f1736385ed958e60cf21456da"
+                    "url": "https://github.com/libical/libical/releases/download/v3.0.3/libical-3.0.3.tar.gz",
+                    "sha256": "5b91eb8ad2d2dcada39d2f81d5e3ac15895823611dc7df91df39a35586f39241"
                 }
             ]
         },
@@ -89,8 +89,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.26/evolution-data-server-3.26.1.tar.xz",
-                    "sha256": "ea207a3abd5e7bb8ccaa88741de7715a128083efdf8296af2c3a2fb8d072a4b3"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.28/evolution-data-server-3.28.0.tar.xz",
+                    "sha256": "fb9546d5fedbb00de6c6cec3850f2cdfea234af221e645d15721686a8df77ef9"
                 }
             ]
         },
@@ -105,8 +105,8 @@
             "sources": [
                 {
                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/1.12/tracker-1.12.4.tar.xz",
-                    "sha256": "b33c2ff730bafaffb34cab79d29d50392426f02d29d1690c4f6d384ff60a358d"
+                    "url": "https://download.gnome.org/sources/tracker/2.0/tracker-2.0.3.tar.xz",
+                    "sha256": "5a2fb274c128ec67a920944937b5147ceaf5db16fef6691ea22c4cb841e20580"
                 }
             ]
         },
@@ -115,8 +115,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/bijiben/3.26/bijiben-3.26.2.tar.xz",
-                    "sha256": "7e574484b2fdc39d56ac589aff560669691054bd01a126836f365916ebed4305"
+                    "url": "https://download.gnome.org/sources/bijiben/3.28/bijiben-3.28.0.tar.xz",
+                    "sha256": "26cf004c8520fbf4578a6af93ffad3c064e31aa542d5764283b7b6fce244fc10"
                 }
             ],
             "post-install": [ "rm /app/share/metainfo/org.gnome.bijiben.appdata.xml" ]
