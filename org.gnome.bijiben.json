@@ -12,6 +12,7 @@
         "--socket=wayland",
         /* Needs to talk to the network: */
         "--share=network",
+        "--talk-name=org.gtk.vfs", "--talk-name=org.gtk.vfs.*",
         /* Full filesystem access. Is this needed? */
         "--filesystem=host",
         /* Needed for dconf to work */
