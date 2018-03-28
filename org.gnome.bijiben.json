@@ -119,8 +119,7 @@
                     "url": "https://download.gnome.org/sources/bijiben/3.28/bijiben-3.28.0.tar.xz",
                     "sha256": "26cf004c8520fbf4578a6af93ffad3c064e31aa542d5764283b7b6fce244fc10"
                 }
-            ],
-            "post-install": [ "rm /app/share/metainfo/org.gnome.bijiben.appdata.xml" ]
+            ]
         }
     ]
 }
