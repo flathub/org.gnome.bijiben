@@ -90,8 +90,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.28/evolution-data-server-3.28.0.tar.xz",
-                    "sha256": "fb9546d5fedbb00de6c6cec3850f2cdfea234af221e645d15721686a8df77ef9"
+                    "url": "https://download.gnome.org/sources/evolution-data-server/3.28/evolution-data-server-3.28.2.tar.xz",
+                    "sha256": "531a790182dc6b6b2d0421feb34489c7ddf5cc807e9cffbb87461d13e047f3ab"
                 }
             ]
         },
