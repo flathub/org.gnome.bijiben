@@ -134,8 +134,9 @@
             ]
         },
         {
-            "name" : "bijiben",
-            "sources" : [
+            "name": "bijiben",
+            "buildsystem": "meson",
+            "sources": [
                 {
                     "type" : "archive",
                     "url" : "https://download.gnome.org/sources/bijiben/3.30/bijiben-3.30.0.tar.xz",
