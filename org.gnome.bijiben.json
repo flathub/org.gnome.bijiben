@@ -1,80 +1,92 @@
 {
-    "app-id": "org.gnome.bijiben",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
-    "branch": "stable",
-    "sdk": "org.gnome.Sdk",
-    "command": "bijiben",
-    "finish-args": [
-        /* X11 + XShm access */
-        "--share=ipc", "--socket=x11",
-        /* Wayland access */
+    "app-id" : "org.gnome.bijiben",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "3.28",
+    "branch" : "stable",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "bijiben",
+    "finish-args" : [
+        "--share=ipc",
+        "--socket=x11",
         "--socket=wayland",
-        /* Needs to talk to the network: */
         "--share=network",
-        "--talk-name=org.gtk.vfs", "--talk-name=org.gtk.vfs.*",
-        /* Full filesystem access. Is this needed? */
+        "--talk-name=org.gtk.vfs",
+        "--talk-name=org.gtk.vfs.*",
         "--filesystem=host",
-        /* Needed for dconf to work */
-        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
-        /* Evolution data server access */
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--talk-name=org.gnome.OnlineAccounts",
         "--talk-name=org.gnome.evolution.dataserver.AddressBook9",
         "--talk-name=org.gnome.evolution.dataserver.Calendar7",
         "--talk-name=org.gnome.evolution.dataserver.Sources5",
         "--talk-name=org.gnome.evolution.dataserver.Subprocess.Backend.*",
-        /* Tracker access */
         "--talk-name=org.freedesktop.Tracker1"
     ],
     "build-options" : {
-        "cflags": "-O2 -g",
-        "cxxflags": "-O2 -g",
-        "env": {
-            "V": "1"
+        "cflags" : "-O2 -g",
+        "cxxflags" : "-O2 -g",
+        "env" : {
+            "V" : "1"
         }
     },
-    "cleanup": ["/include", "/lib/pkgconfig",
-                "/share/pkgconfig", "/share/aclocal",
-                "/man", "/share/man", "/share/gtk-doc",
-                "/share/vala",
-                "*.la", "*.a"],
-    "modules": [
+    "cleanup" : [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig",
+        "/share/aclocal",
+        "/man",
+        "/share/man",
+        "/share/gtk-doc",
+        "/share/vala",
+        "*.la",
+        "*.a"
+    ],
+    "modules" : [
         {
-            "name": "gnome-online-accounts",
-            "config-opts": ["--disable-telepathy", "--disable-documentation", "--disable-backend"],
-            "sources": [
+            "name" : "gnome-online-accounts",
+            "config-opts" : [
+                "--disable-telepathy",
+                "--disable-documentation",
+                "--disable-backend"
+            ],
+            "sources" : [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.28/gnome-online-accounts-3.28.0.tar.xz",
-                    "sha256": "87bc4ef307604f1ce4f09f6e5c9996ef8d37ca5e0a3bf76f6b27d71844adb40c"
+                    "type" : "archive",
+                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.28/gnome-online-accounts-3.28.0.tar.xz",
+                    "sha256" : "87bc4ef307604f1ce4f09f6e5c9996ef8d37ca5e0a3bf76f6b27d71844adb40c"
                 }
             ]
         },
         {
-            "name": "libical",
-            "cleanup": [ "/lib/cmake"],
-            "buildsystem": "cmake",
-            "config-opts": [ "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
-                             "-DBUILD_SHARED_LIBS:BOOL=ON" ],
-            "sources": [
+            "name" : "libical",
+            "cleanup" : [
+                "/lib/cmake"
+            ],
+            "buildsystem" : "cmake",
+            "config-opts" : [
+                "-DCMAKE_INSTALL_LIBDIR:PATH=/app/lib",
+                "-DBUILD_SHARED_LIBS:BOOL=ON"
+            ],
+            "sources" : [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/libical/libical/releases/download/v3.0.3/libical-3.0.3.tar.gz",
-                    "sha256": "5b91eb8ad2d2dcada39d2f81d5e3ac15895823611dc7df91df39a35586f39241"
+                    "type" : "archive",
+                    "url" : "https://github.com/libical/libical/releases/download/v3.0.3/libical-3.0.3.tar.gz",
+                    "sha256" : "5b91eb8ad2d2dcada39d2f81d5e3ac15895823611dc7df91df39a35586f39241"
                 }
             ]
         },
         {
-            "name": "evolution-data-server",
-            "cleanup": [
+            "name" : "evolution-data-server",
+            "cleanup" : [
                 "/lib/cmake",
                 "/lib/evolution-data-server/*-backends",
                 "/libexec",
                 "/share/dbus-1/services"
             ],
-            "buildsystem": "cmake",
-            "config-opts": [
+            "buildsystem" : "cmake",
+            "config-opts" : [
                 "-DENABLE_GTK=ON",
                 "-DENABLE_GOOGLE_AUTH=OFF",
                 "-DENABLE_UOA=OFF",
@@ -87,37 +99,47 @@
                 "-DENABLE_GTK_DOC=OFF",
                 "-DENABLE_EXAMPLES=OFF"
             ],
-            "sources": [
+            "sources" : [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/evolution-data-server/3.28/evolution-data-server-3.28.2.tar.xz",
-                    "sha256": "531a790182dc6b6b2d0421feb34489c7ddf5cc807e9cffbb87461d13e047f3ab"
+                    "type" : "archive",
+                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.28/evolution-data-server-3.28.2.tar.xz",
+                    "sha256" : "531a790182dc6b6b2d0421feb34489c7ddf5cc807e9cffbb87461d13e047f3ab"
                 }
             ]
         },
         {
-            "name": "tracker",
-            "cleanup": [ "/bin", "/etc", "/libexec" ],
-            "config-opts": [ "--disable-miner-apps", "--disable-static",
-                             "--disable-tracker-extract", "--disable-tracker-needle",
-                             "--disable-tracker-preferences", "--disable-artwork",
-                             "--disable-tracker-writeback", "--disable-miner-user-guides",
-                             "--with-bash-completion-dir=no"],
-            "sources": [
+            "name" : "tracker",
+            "cleanup" : [
+                "/bin",
+                "/etc",
+                "/libexec"
+            ],
+            "config-opts" : [
+                "--disable-miner-apps",
+                "--disable-static",
+                "--disable-tracker-extract",
+                "--disable-tracker-needle",
+                "--disable-tracker-preferences",
+                "--disable-artwork",
+                "--disable-tracker-writeback",
+                "--disable-miner-user-guides",
+                "--with-bash-completion-dir=no"
+            ],
+            "sources" : [
                 {
-                   "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/2.0/tracker-2.0.3.tar.xz",
-                    "sha256": "5a2fb274c128ec67a920944937b5147ceaf5db16fef6691ea22c4cb841e20580"
+                   "type" : "archive",
+                    "url" : "https://download.gnome.org/sources/tracker/2.0/tracker-2.0.3.tar.xz",
+                    "sha256" : "5a2fb274c128ec67a920944937b5147ceaf5db16fef6691ea22c4cb841e20580"
                 }
             ]
         },
         {
-            "name": "bijiben",
-            "sources": [
+            "name" : "bijiben",
+            "sources" : [
                 {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/bijiben/3.28/bijiben-3.28.2.tar.xz",
-                    "sha256": "5a6ed663d0cc54725f6fb9c8e7626f12ccd34740f99eadfc11d5fb2bafc62dfc"
+                    "type" : "archive",
+                    "url" : "https://download.gnome.org/sources/bijiben/3.28/bijiben-3.28.2.tar.xz",
+                    "sha256" : "5a6ed663d0cc54725f6fb9c8e7626f12ccd34740f99eadfc11d5fb2bafc62dfc"
                 }
             ]
         }
