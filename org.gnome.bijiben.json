@@ -134,13 +134,13 @@
             ]
         },
         {
-            "name": "bijiben",
-            "buildsystem": "meson",
-            "sources": [
+            "name" : "bijiben",
+            "buildsystem" : "meson",
+            "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/bijiben/3.30/bijiben-3.30.0.tar.xz",
-                    "sha256" : "149d2ce2f0270cd3441016015055ad6b2a77d37ca616da724df4367a1e5c8bf5"
+                    "url" : "https://download.gnome.org/sources/bijiben/3.30/bijiben-3.30.1.tar.xz",
+                    "sha256" : "f47c4add810a1f298a0a17740b3c46a32a607e5bc1b6e223ecec28b854ced57a"
                 }
             ]
         }
