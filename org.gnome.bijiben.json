@@ -139,8 +139,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/bijiben/3.30/bijiben-3.30.1.tar.xz",
-                    "sha256" : "f47c4add810a1f298a0a17740b3c46a32a607e5bc1b6e223ecec28b854ced57a"
+                    "url" : "https://download.gnome.org/sources/bijiben/3.30/bijiben-3.30.2.tar.xz",
+                    "sha256" : "fab3ac9837e545cee42d1014700ae119a1b24fab95a7709515a1f1de2c148852"
                 }
             ]
         }
