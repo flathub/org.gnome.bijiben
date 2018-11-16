@@ -1,7 +1,7 @@
 {
     "app-id" : "org.gnome.bijiben",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.28",
+    "runtime-version" : "3.30",
     "branch" : "stable",
     "sdk" : "org.gnome.Sdk",
     "command" : "bijiben",
@@ -24,13 +24,6 @@
         "--talk-name=org.gnome.evolution.dataserver.Subprocess.Backend.*",
         "--talk-name=org.freedesktop.Tracker1"
     ],
-    "build-options" : {
-        "cflags" : "-O2 -g",
-        "cxxflags" : "-O2 -g",
-        "env" : {
-            "V" : "1"
-        }
-    },
     "cleanup" : [
         "/include",
         "/lib/pkgconfig",
@@ -54,8 +47,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.28/gnome-online-accounts-3.28.0.tar.xz",
-                    "sha256" : "87bc4ef307604f1ce4f09f6e5c9996ef8d37ca5e0a3bf76f6b27d71844adb40c"
+                    "url" : "https://download.gnome.org/sources/gnome-online-accounts/3.30/gnome-online-accounts-3.30.0.tar.xz",
+                    "sha256" : "27d9d88942aa02a1f8d003dfe515483d8483f216ba1e297a8ef67a42cf4bcfc3"
                 }
             ]
         },
@@ -94,6 +87,7 @@
                 "-DENABLE_VALA_BINDINGS=OFF",
                 "-DENABLE_WEATHER=OFF",
                 "-DWITH_OPENLDAP=OFF",
+                "-DWITH_LIBDB=OFF",
                 "-DENABLE_INTROSPECTION=OFF",
                 "-DENABLE_INSTALLED_TESTS=OFF",
                 "-DENABLE_GTK_DOC=OFF",
@@ -102,8 +96,8 @@
             "sources" : [
                 {
                     "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.28/evolution-data-server-3.28.2.tar.xz",
-                    "sha256" : "531a790182dc6b6b2d0421feb34489c7ddf5cc807e9cffbb87461d13e047f3ab"
+                    "url" : "https://download.gnome.org/sources/evolution-data-server/3.30/evolution-data-server-3.30.2.tar.xz",
+                    "sha256" : "5b3ab1557ea27475e5f78014ae5a4a989179cbf8c98ce7e26bd70b7767388e40"
                 }
             ]
         },
@@ -128,8 +122,8 @@
             "sources" : [
                 {
                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/tracker/2.0/tracker-2.0.3.tar.xz",
-                    "sha256" : "5a2fb274c128ec67a920944937b5147ceaf5db16fef6691ea22c4cb841e20580"
+                    "url" : "https://download.gnome.org/sources/tracker/2.1/tracker-2.1.5.tar.xz",
+                    "sha256" : "b234b7573773b904dc3e885ff5ec44e86b035767cde783bc50d65d12cd72861e"
                 }
             ]
         },
