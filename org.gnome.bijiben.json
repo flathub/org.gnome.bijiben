@@ -36,6 +36,7 @@
         "*.la",
         "*.a"
     ],
+    "rename-appdata-file" : "org.gnome.Notes.appdata.xml",
     "modules" : [
         {
             "name" : "gnome-online-accounts",
