@@ -36,6 +36,7 @@
         "*.la",
         "*.a"
     ],
+    "rename-desktop-file" : "org.gnome.Notes.desktop",
     "rename-appdata-file" : "org.gnome.Notes.appdata.xml",
     "modules" : [
         {
